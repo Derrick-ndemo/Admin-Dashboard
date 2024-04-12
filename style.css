@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    background: rgba(224, 224, 224, 0.499);
+    /* height: 100vh; */
+    display: grid;
+    grid-template-areas: 
+    'nav header header header'
+    'nav main main aside'
+    'nav main main aside'
+    'nav main main aside'
+    'nav footer footer footer'
+    ;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+    row-gap: 20px;
+}
+
+header {
+    grid-area: header;
+    background-color: hsl(0, 0%, 100%);
+    display: grid;
+    padding: 10px;
+    /* grid-template-columns: repeat(2, 1fr); */
+    
+}
+
+#search_bar {
+    border-radius: 20px;
+    grid-column: 1;
+    height: 30px;
+    width: 300px;
+    background-color: rgba(169, 169, 169, 0.204);
+}
+
+#notification{ 
+    position: relative;
+}
+
+.logo__info {
+    grid-column: 4;
+}
+
+nav {
+    grid-area: nav;
+    background-color: rgb(44, 188, 245);
+}
+
+a {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.common_links ul li {
+    padding: 10px;
+    /* margin-bottom: 10px; */
+}
+
+.minor__liks {
+    margin-top: 40px;
+}
+
+.minor__liks ul li{
+    padding: 10px;
+}
+
+
+main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: fit-content;
+    max-height: 200px;
+    column-gap: 10px;
+    row-gap: 15px;
+}
+
+.project {
+    border-left: 6px solid orange;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0px 15px  rgba(0, 0, 0, 0.115);
+}
+
+.accessibility {
+    margin-top: 70px;
+    margin-left: 300px;
+}
+
+.accessibility span {
+    padding: 10px;
+}
+
+aside {
+    grid-area: aside;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: fit-content;
+    max-height: 200px;
+}
+
+.side {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0px 15px  rgba(0, 0, 0, 0.115);
+}
+
+.site,
+.community {
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+    padding-top: 20px;
+}
+.policy {
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+}
